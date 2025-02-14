@@ -1,67 +1,65 @@
-/* Updated CSS with a modern color scheme */
-
 body {
-    background-color: #f0ece3; /* Warm Cream */
-    color: #1e293b; /* Deep Slate Blue */
+    background-color: #f0ece3;
+    color: #1e293b; 
 }
 
 h1, h2, h3 {
-    color: #3a4750; /* Steel Blue */
+    color: #3a4750; 
 }
 
 button {
-    background-color: #ff8c42; /* Soft Orange */
-    color: #f0ece3; /* Warm Cream */
+    background-color: #ff8c42; 
+    color: #f0ece3; 
     border: 1px solid #ff8c42;
 }
 
 button:hover {
-    background-color: #40c9a2; /* Teal Green */
+    background-color: #40c9a2; 
     border: 1px solid #40c9a2;
 }
 
 .navbar {
-    background-color: #3a4750; /* Steel Blue */
+    background-color: #3a4750; 
 }
 
 .navbar a {
-    color: #f0ece3; /* Warm Cream */
+    color: #f0ece3; 
 }
 
 .navbar a:hover {
-    color: #ff8c42; /* Soft Orange */
+    color: #ff8c42; 
 }
 
 .card {
-    background-color: #f0ece3; /* Warm Cream */
-    border: 1px solid #3a4750; /* Steel Blue */
+    background-color: #f0ece3; 
+    border: 1px solid #3a4750; 
 }
 
 .card-title {
-    color: #1e293b; /* Deep Slate Blue */
+    color: #1e293b; 
 }
 
 .card-text {
-    color: #3a4750; /* Steel Blue */
+    color: #3a4750; 
 }
 
 .alert {
-    background-color: #ff8c42; /* Soft Orange */
-    color: #f0ece3; /* Warm Cream */
+    background-color: #ff8c42; 
+    color: #f0ece3; 
     border: 1px solid #ff8c42;
 }
 
 .shadow {
-    box-shadow: 0px 4px 6px rgba(30, 41, 59, 0.1); /* Deep Slate with Transparency */
+    box-shadow: 0px 4px 6px rgba(30, 41, 59, 0.1); 
 }
 
 .cta-button {
-    background-color: rgb(244, 180, 0); /* Bright Gold */
-    color: #1e293b; /* Deep Slate Blue */
+    background-color: rgb(244, 180, 0); 
+    color: #1e293b; 
     border: 1px solid rgb(244, 180, 0);
 }
 
 .cta-button:hover {
-    background-color: #40c9a2; /* Teal Green */
+    background-color: #40c9a2; 
     border: 1px solid #40c9a2;
 }
