@@ -1,14 +1,15 @@
 /* Global Variables */
 :root {
-    --base-font-family: 'Inter', sans-serif;
-    --primary-color: #ff5722;
-    --secondary-color: #fff;
-    --background-color: #f4f4f4;
-    --text-color: #333;
+    --base-font-family: 'Poppins', sans-serif;
+    --primary-color: #4CAF50;
+    --secondary-color: #FAFAFA;
+    --background-color: #E3F2FD;
+    --text-color: #212121;
+    --border-color: #BDBDBD;
+    --chat-footer-border-color: #9E9E9E;
     --border-radius: 8px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease-in-out;
-    --border-color: #ccc;
 }
 
 /* General Styles */
@@ -21,7 +22,7 @@ body {
 }
 
 /* Button Styles */
-.button, .btn {
+.button {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 10px 20px;
@@ -31,8 +32,8 @@ body {
     transition: var(--transition);
 }
 
-.button:hover, .btn:hover {
-    filter: brightness(90%);
+.button:hover {
+    background-color: #388E3C;
 }
 
 /* Card Styles */
@@ -45,7 +46,7 @@ body {
 }
 
 /* Form Styles */
-input[type="text"], input[type="email"], textarea, .chat-footer input {
+input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -58,7 +59,6 @@ input[type="text"], input[type="email"], textarea, .chat-footer input {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    max-width: 100%;
     width: 300px;
     background: var(--secondary-color);
     border-radius: var(--border-radius);
@@ -83,7 +83,7 @@ input[type="text"], input[type="email"], textarea, .chat-footer input {
 .chat-footer {
     display: flex;
     padding: 10px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--chat-footer-border-color);
 }
 
 .chat-footer input {
@@ -103,5 +103,5 @@ input[type="text"], input[type="email"], textarea, .chat-footer input {
 }
 
 .chat-footer button:hover {
-    filter: brightness(90%);
+    background: #388E3C;
 }
