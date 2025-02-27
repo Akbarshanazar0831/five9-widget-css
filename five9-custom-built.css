@@ -7,32 +7,32 @@
 }
 
 /* Override the text color for messenger body */
-.pn-msg-list {
+.root .pn-msg-list {
   background-color: var(--custom-background-color) !important;
   color: var(--custom-text-color) !important;
 }
 
 /* Style for the header area of your messenger */
-.pn-msg-header {
+.root .pn-msg-header {
   background-color: var(--custom-primary-color) !important;
   color: #ffffff !important;
   border-radius: var(--custom-border-radius) var(--custom-border-radius) 0 0;
 }
 
 /* Buttons in messenger footer, e.g., send button */
-.pn-msg-input button {
+.root .pn-msg-input button {
   background-color: var(--custom-primary-color) !important;
   color: #ffffff !important;
   border-radius: var(--custom-border-radius) !important;
 }
 
 /* On hover, lighten the send button a bit */
-.pn-msg-input button:hover {
+.root .pn-msg-input button:hover {
   filter: brightness(110%) !important;
 }
 
 /* Example: Style the user’s own messages differently */
-.pn-msg--own .pn-msg__bubble {
+.root .pn-msg--own .pn-msg__bubble {
   background-color: var(--custom-primary-color) !important;
   color: #ffffff !important;
   border-radius: var(--custom-border-radius) !important;
