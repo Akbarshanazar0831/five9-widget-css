@@ -1,315 +1,41 @@
-/* -------------------------------------------------------------------------- */
-/* 1. Root Variables                                                          */
-/* -------------------------------------------------------------------------- */
+/* Root Variables (Optional) */
 :root {
-  /* Primary Brand Colors */
-  --lm-text-default: #3a3a3a;
-  --lm-text-muted: #707070;
-  --lm-text-light: #ffffff;
-  --lm-primary-color: #4CAF50; /* e.g., green */
-  --lm-secondary-color: #FAFAFA;
-  
-  /* Layout + Backgrounds */
-  --lm-bg-default: #ffffff;
-  --lm-bg-alternate: linear-gradient(180deg, #ffffff 0%, #e8eff6 100%);
-  --lm-bg-widget: #f2f2f2;
-
-  /* Borders + Dividers */
-  --lm-border-emphasis: #949494;
-  --lm-border-default: #dddddd;
-  
-  /* States */
-  --lm-state-default: #ffffff;
-  --lm-state-hover: #e3f2fd;
-  --lm-state-active: var(--lm-primary-color);
-
-  /* Form Elements */
-  --lm-form-bg-default: #ffffff;
-  --lm-form-border-default: #8f8f8f;
-  --lm-form-bg-active: #ffffff;
-  --lm-form-border-active: #4CAF50;
-  --lm-form-dropdown-bg: #ffffff;
-  --lm-form-error-border: #eb0000;
-
-  /* Buttons */
-  --lm-button-primary-bg: var(--lm-primary-color);
-  --lm-button-primary-text: #ffffff;
-  --lm-button-primary-hover-bg: #3E9F44;
-  --lm-button-primary-active-bg: #2B7F33;
-
-  --lm-button-minimal-text: #4CAF50;
-  --lm-button-minimal-hover-text: #3E9F44;
-  --lm-button-minimal-hover-bg: #e3f2fd;
-  --lm-button-minimal-active-text: #2B7F33;
-  --lm-button-minimal-active-bg: #c2e2d3;
-
-  --lm-button-secondary-border: var(--lm-primary-color);
-  --lm-button-secondary-text: var(--lm-primary-color);
-  --lm-button-secondary-hover-bg: #3E9F44;
-  --lm-button-secondary-hover-text: #ffffff;
-  --lm-button-secondary-active-bg: #2B7F33;
-  --lm-button-secondary-active-text: #ffffff;
-
-  /* Typography */
-  --lm-font-default: Poppins, sans-serif;
-  --lm-font-weight-default: 400; /* Regular */
-  --lm-font-size-default: 16px;
-  --lm-line-height-default: 1.5;
-
-  /* Chat / Messenger */
-  --lm-chat-dark-bg: var(--lm-primary-color);
-  --lm-chat-dark-text: #ffffff;
-  --lm-chat-light-bg: #ffffff;
-  --lm-chat-light-text: #444444;
-
-  /* Additional Example Variables */
-  --lm-body-xl-font-size: 18px;
-  --lm-body-large-font-size: 16px;
-  --lm-body-medium-font-size: 14px;
-  --lm-body-small-font-size: 12px;
-  --lm-title-page-font-size: 24px;
-  --lm-title-section-font-size: 20px;
-
-  /* Spacing & Sizing */
-  --lm-border-radius: 8px;
-  --lm-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --custom-primary-color: #4CAF50;
+  --custom-background-color: #fafafa;
+  --custom-text-color: #1e293b;
+  --custom-border-radius: 8px;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 2. Base / Global Styles                                                   */
-/* -------------------------------------------------------------------------- */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--lm-font-default);
-  font-size: var(--lm-font-size-default);
-  line-height: var(--lm-line-height-default);
-  background-color: var(--lm-bg-default);
-  color: var(--lm-text-default);
+/* Override the text color for messenger body */
+.pn-msg-list {
+  background-color: var(--custom-background-color) !important;
+  color: var(--custom-text-color) !important;
 }
 
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  max-width: 100%;
+/* Style for the header area of your messenger */
+.pn-msg-header {
+  background-color: var(--custom-primary-color) !important;
+  color: #ffffff !important;
+  border-radius: var(--custom-border-radius) var(--custom-border-radius) 0 0;
 }
 
-/* Removes default list styles */
-ol,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Buttons in messenger footer, e.g., send button */
+.pn-msg-input button {
+  background-color: var(--custom-primary-color) !important;
+  color: #ffffff !important;
+  border-radius: var(--custom-border-radius) !important;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 3. Utility Classes (Simplified)                                           */
-/* -------------------------------------------------------------------------- */
-/* Provide a few utility classes if desired (feel free to expand) */
-.text-center {
-  text-align: center;
-}
-.text-light {
-  color: var(--lm-text-light);
-}
-.bg-primary {
-  background-color: var(--lm-primary-color);
-}
-.border-default {
-  border: 1px solid var(--lm-border-default);
-}
-.rounded {
-  border-radius: var(--lm-border-radius);
-}
-.shadow {
-  box-shadow: var(--lm-box-shadow);
+/* On hover, lighten the send button a bit */
+.pn-msg-input button:hover {
+  filter: brightness(110%) !important;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 4. Buttons                                                                */
-/* -------------------------------------------------------------------------- */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1rem;
-  font-weight: 500;
-  border: 1px solid transparent;
-  border-radius: var(--lm-border-radius);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Example: Style the user’s own messages differently */
+.pn-msg--own .pn-msg__bubble {
+  background-color: var(--custom-primary-color) !important;
+  color: #ffffff !important;
+  border-radius: var(--custom-border-radius) !important;
 }
 
-.btn-primary {
-  background-color: var(--lm-button-primary-bg);
-  color: var(--lm-button-primary-text);
-}
-.btn-primary:hover {
-  background-color: var(--lm-button-primary-hover-bg);
-}
-.btn-primary:active {
-  background-color: var(--lm-button-primary-active-bg);
-}
 
-.btn-secondary {
-  background-color: #ffffff;
-  color: var(--lm-button-secondary-text);
-  border-color: var(--lm-button-secondary-border);
-}
-.btn-secondary:hover {
-  background-color: var(--lm-button-secondary-hover-bg);
-  color: var(--lm-button-secondary-hover-text);
-}
-.btn-secondary:active {
-  background-color: var(--lm-button-secondary-active-bg);
-  color: var(--lm-button-secondary-active-text);
-}
-
-/* -------------------------------------------------------------------------- */
-/* 5. Alert Styles                                                           */
-/* -------------------------------------------------------------------------- */
-.alert {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--lm-button-primary-bg);
-  color: var(--lm-button-primary-text);
-  border: 1px solid var(--lm-button-primary-bg);
-  border-radius: var(--lm-border-radius);
-  padding: 1rem;
-}
-.alert .alert-content {
-  flex: 1;
-}
-
-/* -------------------------------------------------------------------------- */
-/* 6. Card Styles                                                            */
-/* -------------------------------------------------------------------------- */
-.card {
-  background-color: var(--lm-bg-default);
-  border: 1px solid var(--lm-border-default);
-  border-radius: var(--lm-border-radius);
-  box-shadow: var(--lm-box-shadow);
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.card-title {
-  font-size: var(--lm-title-section-font-size);
-  margin-bottom: 0.5rem;
-  color: var(--lm-text-default);
-}
-.card-text {
-  color: var(--lm-text-muted);
-}
-
-/* -------------------------------------------------------------------------- */
-/* 7. Form & Input Styles                                                    */
-/* -------------------------------------------------------------------------- */
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border: 1px solid var(--lm-form-border-default);
-  border-radius: var(--lm-border-radius);
-  font-family: var(--lm-font-default);
-  font-size: 1rem;
-  color: var(--lm-text-default);
-}
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--lm-form-border-active);
-  outline-offset: 2px;
-}
-
-/* -------------------------------------------------------------------------- */
-/* 8. Chat / Messenger Styles                                                */
-/* -------------------------------------------------------------------------- */
-.chat-widget {
-  width: 320px;
-  background-color: var(--lm-bg-widget);
-  border-radius: var(--lm-border-radius);
-  box-shadow: var(--lm-box-shadow);
-  overflow: hidden;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.chat-header {
-  background-color: var(--lm-primary-color);
-  color: var(--lm-text-light);
-  padding: 1rem;
-  font-weight: 600;
-  text-align: center;
-}
-
-.chat-body {
-  padding: 1rem;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.chat-footer {
-  display: flex;
-  padding: 1rem;
-  border-top: 1px solid var(--lm-border-default);
-}
-
-.chat-footer input[type='text'] {
-  flex: 1;
-  border: none;
-  padding: 0.75rem;
-  border-radius: var(--lm-border-radius);
-  margin-right: 1rem;
-  color: var(--lm-text-default);
-}
-
-.chat-footer button {
-  border: none;
-  background-color: var(--lm-button-primary-bg);
-  color: var(--lm-button-primary-text);
-  padding: 0.75rem 1rem;
-  border-radius: var(--lm-border-radius);
-  cursor: pointer;
-}
-.chat-footer button:hover {
-  background-color: var(--lm-button-primary-hover-bg);
-}
-.chat-footer button:active {
-  background-color: var(--lm-button-primary-active-bg);
-}
-
-/* -------------------------------------------------------------------------- */
-/* 9. Miscellaneous                                                          */
-/* -------------------------------------------------------------------------- */
-.avatar {
-  display: inline-flex;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 48px;
-  height: 48px;
-}
-
-.hidden {
-  display: none !important;
-}
-
-/* Example class for a 'dark-mode' override, if you want to support it:
-.dark-mode {
-  background-color: #333;
-  color: #fafafa;
-}
-*/
-
-/* Additional custom styles, animations, or overrides can go here. */
-
-/* End of file */
