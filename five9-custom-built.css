@@ -1,9 +1,9 @@
 /* Root Variables (Optional) */
 :root {
-  --custom-primary-color: #4CAF50;
-  --custom-background-color: #fafafa;
+  --custom-primary-color: #000000;
+  --custom-background-color: #000000;
   --custom-text-color: #1e293b;
-  --custom-border-radius: 8px;
+  --custom-border-radius: 120px;
 }
 
 /* Override the text color for messenger body */
